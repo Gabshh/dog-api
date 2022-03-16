@@ -8,12 +8,23 @@ body {
     background-color: rgb(43, 43, 43);
 }
 
+header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 #raca {
     height: 50px;
-    width: 93vw;
+    width: 70vw;
 }
 
 #pesquisar {
+    height: 50px;
+    width: 100px;
+}
+
+#abrir-modal {
     height: 50px;
     width: 100px;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./modal.css">
     <title>Doggument</title>
 </head>
 <body>
@@ -15,11 +16,32 @@
             
         </datalist>
         <button id="pesquisar">Pesquisar</button>
+        <button id="abrir-modal">Abrir Modal</button>
     </header>
     <main>
         <div id="imagem-container">
 
         </div>
     </main>
+
+    <div class="modal-container" id="modal-container" >
+        <div class="modal-content">
+            <header>
+                <h2>Teste de Modal</h2>
+            </header>
+            <form>
+                <label>Nome:</label>
+                <input type="">
+                <label>Celular:</label>
+                <input type="">
+                <label>Email:</label>
+                <input type="">
+            </form>
+            <footer>
+                <button id="fechar" >Fechar</button>
+            </footer>
+        </div>
+    </div>
+
 </body>
 </html>
