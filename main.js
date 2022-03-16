@@ -1,14 +1,18 @@
 'use strict'
 
+const pesquisarRacas = async () => {
+    const url = 'https://dog.ceo/api/breeds/list/all'
+    const response = await fetch(url)
+    const data = await response.json()
+    return Object.keys(data.message)
+}
+
 const pesquisarCachorro = async (raca) => {
     const url = `https://dog.ceo/api/breed/${raca}/images`
-
     const response = await fetch(url)
-
     const data = await response.json()
-
+    
     return data
-
 }
 
 const criarImg = (imagem) => {
@@ -29,4 +33,21 @@ const carregarImagens = async () => {
 
 }
 
+const carregarRacas = async() => {
+    const lista = document.getElementById('lista-racas')
+    const racas = await pesquisarRacas()
+    
+    lista.innerHTML = "<option value='" + racas.join("'/> <option value='");
+
+    /* OU:
+    lista.innerHTML = `
+                        <option>
+                            ${racas.join("</option><option>")}
+                        </option>
+                      `
+    */
+}
+
 document.getElementById('pesquisar').addEventListener('click', carregarImagens)
+
+carregarRacas()
